@@ -1,0 +1,43 @@
+* {
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(
+        90deg,
+        rgb(77, 142, 216, 1) 0%, 
+        rgb(84, 240, 188) 100%
+    );
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    place-items: center;
+    border: 3px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.new-task-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    display: block;
+}
+
+.campo-entrada{
+    width: 80%;
+    float: left;
+}
+
+.botao-add{
+    width:20%;
+}
