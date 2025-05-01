@@ -16,6 +16,11 @@ body {
     min-height: 100vh;
 }
 
+h1 {
+    color: white;
+    font-size: 50px;
+}
+
 .conteiner {
     place-items: center;
     border: 3px solid #fff;
@@ -37,12 +42,24 @@ body {
 .campo-entrada {
     width: 80%;
     float: left;
+    font-weight: bold;
 }
 
 .botao-add {
     width: 20%;
+    font-weight: bold;
+    background: rgb(15, 255, 135);
+    color: white;
+    border-radius: 2px;
+    border-width: 1px;
 }
 
 .tarefas {
-
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    display: block;
 }
