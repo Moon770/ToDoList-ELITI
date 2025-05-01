@@ -8,34 +8,72 @@
             To Do List
         </title>
 
+        <link rel="stylesheet" href="https://3ws.dev.br/3ws.css">
         <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <div>
-            <h1>
-                Lista de Tarefas
-            </h1>
 
-            <div class = "conteiner">
+    <body>
+        <section>
+            <div class="textos">
+                <h1>
+                    Lista de Tarefas
+                </h1>
+
+                <p>
+                    Por que não experimenta adicionar uma tarefa?
+                </p>
+            </div>
+
+            <div class="conteiner">
                 <div class="caixa-campo-entrada">
                     <input type="text"
-                    class="campo-entrada"
-                    placeholder=" Adicionar tarefa"
+                        class="campo-entrada"
+                        placeholder=" Adicionar tarefa"
                     >
 
-                    <button class="botao-add">+</button>
+                    <button class="botao-add">
+                        +
+                    </button>
                 </div>
 
-                <div class="tarefas">
+                <div class="listaTarefas" id="lista-tarefas">
                     
+                    <div class="tarefa" id="t1">
+                        <div class="fa fa-check-square" id="check1"></div>
+                        <div class="list-texto" id="texto1">Consertar a luminária em LED do banheiro da garagem do lado norte</div>
+                        <div class="fa fa-pencil-square" id="editar1"></div>
+                        <div class="fa fa-trash-can" id="apagar1"></div>
+                    </div>
+                   
+                    <div class="tarefa" id="t1">
+                        <div class="fa fa-check-square" id="check1"></div>
+                        <div class="list-texto" id="texto1">Consertar a luminária em LED do banheiro da garagem do lado norte</div>
+                        <div class="fa fa-pencil-square" id="editar1"></div>
+                        <div class="fa fa-trash-can" id="apagar1"></div>
+                    </div>                   
+                   
+                    <div class="tarefa" id="t1">
+                        <div class="fa fa-check-square" id="check1"></div>
+                        <div class="list-texto" id="texto1">Consertar a luminária em LED do banheiro da garagem do lado norte</div>
+                        <div class="fa fa-pencil-square" id="editar1"></div>
+                        <div class="fa fa-trash-can" id="apagar1"></div>
+                    </div>                   
+                   
+                    <div class="tarefa" id="t1">
+                        <div class="fa fa-check-square" id="check1"></div>
+                        <div class="list-texto" id="texto1">Consertar a luminária em LED do banheiro da garagem do lado norte</div>
+                        <div class="fa fa-pencil-square" id="editar1"></div>
+                        <div class="fa fa-trash-can" id="apagar1"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
+        <script src="https://3ws.dev.br/3ws.js"></script>
         <script src="scripts.js"></script>
     </body>
 </html>

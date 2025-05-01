@@ -1,5 +1,5 @@
 * {
-    margin: o;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Urbanist", sans-serif;
@@ -16,14 +16,26 @@ body {
     min-height: 100vh;
 }
 
+section {
+    display: grid;
+    place-items: center;
+}
+
 h1 {
     color: white;
     font-size: 50px;
+    text-align: center;
+}
+
+p {
+    color: white;
+    margin-bottom: 30px;
+    font-weight: bold;
 }
 
 .conteiner {
     place-items: center;
-    border: 3px solid #fff;
+    border: 3px solid white;
     padding: 5px;
     border-radius: 10px;
     width: 90%;
@@ -31,7 +43,7 @@ h1 {
 }
 
 .caixa-campo-entrada {
-    background-color: #fff;
+    background-color: white;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -43,6 +55,10 @@ h1 {
     width: 80%;
     float: left;
     font-weight: bold;
+    padding: 0px;
+    border: 1px solid black;
+    border-right: 0px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .botao-add {
@@ -50,16 +66,79 @@ h1 {
     font-weight: bold;
     background: rgb(15, 255, 135);
     color: white;
-    border-radius: 2px;
+    border-radius: 0px 5px 5px 0px;
     border-width: 1px;
 }
 
-.tarefas {
+.botao-add:hover{
+    background: black;
+}
+
+.listaTarefas {
     background-color: #fff;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
     margin-top: 10px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     width: 100%;
     display: block;
+}
+
+.fa {
+    margin: 0px 4px;
+}
+
+.tarefa .fa{
+    width: 5%;
+}
+
+.tarefa{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 5px;
+    gap:5px;
+    border-top:solid 1px #eee;
+    border-right: solid 1px #777;
+    border-bottom:solid 1px #777;
+    border-left:solid 1px #eee;
+    margin-bottom:5px;
+}
+
+.tarefa:hover{
+    border-top:solid 1px #777;
+    border-right: solid 1px #eee;
+    border-bottom:solid 1px #eee;
+    border-left:solid 1px #777; 
+}
+
+.tarefa .list-texto{
+    width: 85%;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.fa-check-square{
+    color:#009900;
+}
+
+.fa-square:hover{
+    color:#CCC;
+}
+
+.fa-check-square:hover{
+    color:#63be63;
+}
+
+.fa-pencil-square:hover{
+    color:#215f94;
+}
+
+.fa-trash-can:hover{
+    color:#F00;
+}
+
+.riscado{
+    text-decoration: line-through;
 }
