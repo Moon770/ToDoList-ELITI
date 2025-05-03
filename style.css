@@ -61,7 +61,7 @@ p {
     border-radius: 5px 0px 0px 5px;
 }
 
-.botao-add {
+.botaoAdd {
     width: 20%;
     font-weight: bold;
     background: rgb(15, 255, 135);
@@ -70,7 +70,7 @@ p {
     border-width: 1px;
 }
 
-.botao-add:hover{
+.botaoAdd:hover{
     background: #000;
 }
 
@@ -120,11 +120,11 @@ p {
 }
 
 .fa-check-square {
-    color:#009900;
+    color:#08ad08;
 }
 
 .fa-square:hover {
-    color:#CCC;
+    color:#63be63;
 }
 
 .fa-check-square:hover {

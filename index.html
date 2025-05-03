@@ -8,9 +8,11 @@
             To Do List
         </title>
 
+        <!-- Endereço das bibliotecas de CSS utilizados -->
         <link rel="stylesheet" href="https://3ws.dev.br/3ws.css">
         <link rel="stylesheet" href="style.css">
 
+        <!-- Links das fontes personalizadas da página -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -19,6 +21,7 @@
     <body>
         <section>
             <div class="textos">
+                <!-- Elementos do topo da página -->
                 <h1>
                     Lista de Tarefas
                 </h1>
@@ -28,33 +31,31 @@
                 </p>
             </div>
 
+            <!-- Conteiner geral dos elementos -->
             <div class="conteiner">
+                <!-- Caixa do input e do Botão -->
                 <div class="caixa-campo-entrada">
-                    <input type="text"
+                    <input type="text" 
+                        value=""
                         class="campo-entrada"
-                        placeholder=" Adicionar tarefa"
+                        placeholder="  Adicionar tarefa"
+                        id="input"
                     >
 
-                    <button class="botao-add">
+                    <button class="botaoAdd" onclick="adicionar()">
                         +
                     </button>
                 </div>
 
+                <!-- Espaço das tarefas (criadas em Java Script) -->
                 <div id="tudo">
-                    <div class="listaTarefas">
-                        <div class="tarefa" id="t1">
-                            <div class="fa fa-check-square" id="check1"></div>
-                            <div class="textoLista" id="texto1">Consertar a luminária em LED do banheiro da garagem do lado norte</div>
-                            <div class="fa fa-pencil-square" id="editar1"></div>
-                            <div class="fa fa-trash-can" id="apagar1"></div>
-                        </div>
+                    <div class="listaTarefas" id="lFazer">
                     </div>
-                
-                    <div class="listaTarefas"></div>
                 </div>
             </div>
         </section>
 
+        <!-- Endereço das bibliotecas de Java Script utilizados -->
         <script src="https://3ws.dev.br/3ws.js"></script>
         <script src="scripts.js"></script>
     </body>
