@@ -17,7 +17,7 @@ function adicionar() {
     var lapis = document.createElement("div");
     var lixeira = document.createElement("div");
     
-    // 
+    // Analizar se "lfazer" contém a classe "oculto"
     if (lfazer.classList.contains("oculto")) {
         lfazer.classList.remove("oculto");
     }
@@ -52,6 +52,7 @@ function adicionar() {
     tarefa.appendChild(lixeira);
 }
 
+// "ENTER" adiciona uma tarefa
 document.getElementById("input").addEventListener("keydown", function(evento) {
     if (evento.key === "Enter") {
         adicionar();
@@ -73,18 +74,22 @@ function editar(textoAlterar) {
         confirmButtonColor: "#215f94",
         cancelButtonColor: "#000",
         confirmButtonText: "Finalizar",
-        cancelButtonText: "Cancelar"
+        cancelButtonText: "Cancelar",
+        // Ao apertar "ENTER" edita a tarefa
+        didOpen: () => {
+            const input = document.getElementById("editarInput");
+            input.focus();
+            input.addEventListener("keydown", function (evento) {
+                if (evento.key==="Enter") {
+                    Swal.clickConfirm();
+                }
+            });
+        }
     }).then((result) => {
         if (result.isConfirmed) {
-            var inputValue = document.querySelector("#editarInput").value;
+            const inputValue = document.getElementById("editarInput").value;
             textoTarefa.innerText = inputValue;
         }
-        document.getElementById("input").addEventListener("keydown", function(evento) {
-            if (evento.key === "Enter") {
-                var inputValue = document.querySelector("#editarInput").value;
-                textoTarefa.innerText = inputValue;
-            }
-        });
     });
 }
 
@@ -98,7 +103,20 @@ function excluir(button) {
         confirmButtonColor: "#ff0000",
         cancelButtonColor: "#000",
         confirmButtonText: "Deletar",
-        cancelButtonText: "Cancelar"
+        cancelButtonText: "Cancelar",
+    // Ao apertar "ENTER" edita a tarefa
+    didOpen: () => {
+	    const idB = button.id
+            const tarefaid = idB.replace("apagar", "t");
+            const tarefa = document.querySelector("#" + tarefaid);
+            const input = document.getElementById("editarInput");
+            input.focus();
+            input.addEventListener("keydown", function (evento) {
+                if (evento.key === "Enter") {
+                    Swal.clickConfirm();
+                }
+            });
+        }
     }).then((result) => {
         if (result.isConfirmed) {
             const idB = button.id
