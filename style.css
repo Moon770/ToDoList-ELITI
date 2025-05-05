@@ -81,7 +81,7 @@ p {
     margin-top: 10px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     width: 100%;
-    display: block;
+    display:block;
 }
 
 .fa {
@@ -104,6 +104,7 @@ p {
     border-bottom:solid 1px #777;
     border-left:solid 1px #eee;
     margin-bottom:5px;
+    width:100%;
 }
 
 .tarefa:hover {
@@ -141,4 +142,7 @@ p {
 
 .riscado {
     text-decoration: line-through;
+}
+.oculto{
+    display:none;
 }

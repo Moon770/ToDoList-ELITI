@@ -4,14 +4,15 @@ var id = 0
 // Botão "editar" da tarefa
 function editar(textoAlterar) {
     // Chamando e trocando os valores do texto na aba de edição
-    const inputValue = document.querySelector("#editarInput").value;
+    
     const textoId = textoAlterar.id.replace("lapis", "texto");
     const textoTarefa = document.getElementById(textoId);
+    var textoAtual = document.getElementById(textoId).innerHTML;
 
     // Aba de edição
     Swal.fire({
         title: "Altere como quiser sua tarefa",
-        html: "<input value='' id='editarInput'>",
+        html: "<input value='"+ textoAtual +"' id='editarInput'>",
         showCancelButton: true,
         confirmButtonColor: "#215f94",
         cancelButtonColor: "#000",
@@ -19,7 +20,8 @@ function editar(textoAlterar) {
         cancelButtonText: "Cancelar"
     }).then((result) => {
         if (result.isConfirmed) {
-            textoTarefa.innerText = inputValue
+            var inputValue = document.querySelector("#editarInput").value;
+            textoTarefa.innerText = inputValue;
         }
       });
 }
@@ -43,6 +45,18 @@ function excluir(button) {
             tarefa.remove();
         }
       });
+
+      //
+      const lfazer = document.querySelector("#lFazer");
+      if(lfazer.innerHTML==""){
+        lfazer.classList.add("oculto");
+      }
+
+      //
+      const lfeito = document.querySelector("#lFeito");
+      if(lfeito.innerHTML==""){
+        lfeito.classList.add("oculto");
+      }      
 }
 
 // Função "adicionar tarefa"
@@ -60,6 +74,11 @@ function adicionar() {
     const texto = document.createElement("div");
     const lapis = document.createElement("div");
     const lixeira = document.createElement("div");
+    
+    // 
+    if(lfazer.getElementsByClassName("oculto")){
+        lfazer.classList.remove("oculto");
+    }
 
     // Propriedade "tarefa"
     tarefa.setAttribute("class", "tarefa");
@@ -95,6 +114,7 @@ function adicionar() {
 function checkar(checkarTarefa) {
     // Chamando a DIV "tudo" do HTML
     const tudo = document.querySelector("#tudo");
+    const lFeita = document.querySelector("lFeita");     
 
     // Elementos das tarefas feitas
     const quadrado = document.getElementById(checkarTarefa.id);
@@ -111,13 +131,19 @@ function checkar(checkarTarefa) {
     const tarefaCheckada = tarefa.cloneNode(true);
 
     // Criando a DIV onde a tarefa conclu´da ficará
-    const lfeita = document.createElement("div");
-    lfeita.appendChild(tarefaCheckada);
+    // const lfeita = document.createElement("div");
+    // lfeita.appendChild(tarefaCheckada);
 
     // Atribuindo a área das tarefas feitas
-    lfeita.setAttribute("class", "listaTarefas");
-    lfeita.setAttribute("id", "lFeita");
-    tudo.appendChild(lfeita);
+    // lfeita.setAttribute("class", "listaTarefas");
+    // lfeita.setAttribute("id", "lFeita");
+    // tudo.appendChild(lfeita);
+
+    lFeita.appendChild(tarefaCheckada);
+
+    if(lFeita.getElementsByClassName("oculto")){
+        lFeita.classList.remove("oculto");
+    }
 
     // Remover a tarefa original depois de "checkada"
     tarefa.remove()
