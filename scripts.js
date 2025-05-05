@@ -44,20 +44,20 @@ function excluir(button) {
             const tarefa = document.querySelector("#" + tarefaid)
             tarefa.remove();
         }
-      });
-
-      //
-      const lfazer = document.querySelector("#lFazer");
-      if(lfazer.innerHTML==""){
-        lfazer.classList.add("oculto");
-      }
-
-      //
-      const lfeito = document.querySelector("#lFeito");
-      if(lfeito.innerHTML==""){
-        lfeito.classList.add("oculto");
-      }      
+      });  
 }
+
+ //
+ const lfazer = document.querySelector("#lFazer");
+ if(lfazer.innerHTML=="") {
+   lfazer.classList.add("oculto");
+ }
+
+ //
+ const lfeito = document.querySelector("#lFeito");
+ if(lfeito.innerHTML=="") {
+   lfeito.classList.add("oculto");
+ }    
 
 // Função "adicionar tarefa"
 function adicionar() {
@@ -69,11 +69,11 @@ function adicionar() {
     const lfazer = document.querySelector("#lFazer");
 
     // Criando os DIVs das propriedades da linha da tarefa
-    const tarefa = document.createElement("div");
-    const quadrado = document.createElement("div");
-    const texto = document.createElement("div");
-    const lapis = document.createElement("div");
-    const lixeira = document.createElement("div");
+    tarefa = document.createElement("div");
+    var quadrado = document.createElement("div");
+    var texto = document.createElement("div");
+    var lapis = document.createElement("div");
+    var lixeira = document.createElement("div");
     
     // 
     if(lfazer.getElementsByClassName("oculto")){
@@ -117,29 +117,29 @@ function checkar(checkarTarefa) {
     const lFeita = document.querySelector("lFeita");     
 
     // Elementos das tarefas feitas
-    const quadrado = document.getElementById(checkarTarefa.id);
-    const textoId = checkarTarefa.id.replace("quadrado", "texto");
-    const texto = document.getElementById(textoId)
+    var quadrado = document.getElementById(checkarTarefa.id);
+    var textoId = checkarTarefa.id.replace("quadrado", "texto");
+    var texto = document.getElementById(textoId)
     quadrado.setAttribute("class", "fa fa-check-square");
     texto.setAttribute("class", "textoLista riscado")
 
     // Chamando o ID da tarefa
-    const tarefaId = checkarTarefa.id.replace("quadrado", "t");
-    const tarefa = document.getElementById(tarefaId);
+    var tarefaId = checkarTarefa.id.replace("quadrado", "t");
+    var tarefa = document.getElementById(tarefaId);
 
     // Clonando a tarefa
-    const tarefaCheckada = tarefa.cloneNode(true);
+    var tarefaCheckada = tarefa.cloneNode(true);
 
-    // Criando a DIV onde a tarefa conclu´da ficará
-    // const lfeita = document.createElement("div");
-    // lfeita.appendChild(tarefaCheckada);
+    // Criando a DIV onde a tarefa concluída ficará
+    const lfeita = document.createElement("div");
+    lfeita.appendChild(tarefaCheckada);
 
     // Atribuindo a área das tarefas feitas
-    // lfeita.setAttribute("class", "listaTarefas");
-    // lfeita.setAttribute("id", "lFeita");
-    // tudo.appendChild(lfeita);
+    lfeita.setAttribute("class", "listaTarefas");
+    lfeita.setAttribute("id", "lFeita");
+    tudo.appendChild(lfeita);
 
-    lFeita.appendChild(tarefaCheckada);
+    lfeitoa.appendChild(tarefaCheckada);
 
     if(lFeita.getElementsByClassName("oculto")){
         lFeita.classList.remove("oculto");

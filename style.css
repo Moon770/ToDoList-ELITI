@@ -81,7 +81,7 @@ p {
     margin-top: 10px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     width: 100%;
-    display:block;
+    display: block;
 }
 
 .fa {
@@ -143,6 +143,11 @@ p {
 .riscado {
     text-decoration: line-through;
 }
-.oculto{
-    display:none;
+
+.oculto {
+    display: none;
+}
+
+.visivel {
+    display: block;
 }
