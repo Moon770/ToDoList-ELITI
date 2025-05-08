@@ -22,20 +22,20 @@ section {
 }
 
 h1 {
-    color: white;
+    color: #fff;
     font-size: 50px;
     text-align: center;
 }
 
 p {
-    color: white;
+    color: #fffe;
     margin-bottom: 30px;
     font-weight: bold;
 }
 
 .conteiner {
     place-items: center;
-    border: 3px solid white;
+    border: 3px solid #fff;
     padding: 5px;
     border-radius: 10px;
     width: 90%;
@@ -43,7 +43,7 @@ p {
 }
 
 .caixa-campo-entrada {
-    background-color: white;
+    background-color: #fff;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -56,7 +56,7 @@ p {
     float: left;
     font-weight: bold;
     padding: 0px;
-    border: 1px solid black;
+    border: 1px solid #000;
     border-right: 0px;
     border-radius: 5px 0px 0px 5px;
 }
@@ -65,7 +65,7 @@ p {
     width: 20%;
     font-weight: bold;
     background: rgb(15, 255, 135);
-    color: white;
+    color: #fff;
     border-radius: 0px 5px 5px 0px;
     border-width: 1px;
 }
@@ -98,20 +98,20 @@ p {
     flex-wrap: nowrap;
     align-items: center;
     padding: 5px;
-    gap:5px;
-    border-top:solid 1px #eee;
+    gap: 5px;
+    border-top: solid 1px #eee;
     border-right: solid 1px #777;
-    border-bottom:solid 1px #777;
-    border-left:solid 1px #eee;
-    margin-bottom:5px;
-    width:100%;
+    border-bottom: solid 1px #777;
+    border-left: solid 1px #eee;
+    margin-bottom: 5px;
+    width: 100%;
 }
 
 .tarefa:hover {
-    border-top:solid 1px #777;
+    border-top: solid 1px #777;
     border-right: solid 1px #eee;
-    border-bottom:solid 1px #eee;
-    border-left:solid 1px #777; 
+    border-bottom: solid 1px #eee;
+    border-left: solid 1px #777; 
 }
 
 .tarefa .textoLista {
@@ -121,23 +121,23 @@ p {
 }
 
 .fa-check-square {
-    color:#08ad08;
+    color: #08ad08;
 }
 
 .fa-square:hover {
-    color:#63be63;
+    color: #63be63;
 }
 
 .fa-check-square:hover {
-    color:#63be63;
+    color: #63be63;
 }
 
 .fa-pencil-square:hover {
-    color:#215f94;
+    color: #215f94;
 }
 
 .fa-trash-can:hover {
-    color:#F00;
+    color: #F00;
 }
 
 .riscado {

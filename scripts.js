@@ -126,13 +126,13 @@ function excluir(button) {
         }
     });  
 
-     //
+    // Adicionando classe "oculto" se a DIV lFazer estiver vazia
     const lfazer = document.querySelector("#lFazer");
     if(lfazer.innerHTML==="") {
         lfazer.classList.add("oculto");
     }
 
-    //
+    // Adicionando classe "oculto" se a DIV lFeita estiver vazia
     const lfeito = document.querySelector("#lFeita");
     if(lfeito.innerHTML==="") {
         lfeito.classList.add("oculto");
