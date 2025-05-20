@@ -71,7 +71,7 @@ p {
 }
 
 .botaoAdd:hover{
-    background: #000;
+    background: rgb(101, 255, 183);
 }
 
 .listaTarefas {

@@ -1,5 +1,24 @@
+load()
+
+// Local Storage
+function save() {
+    var tudo = document.getElementById("tudo");
+    localStorage.setItem("tarefas", tudo.innerHTML);
+}
+
+function load() {
+    var tudo = document.getElementById("tudo");
+    var salvo = localStorage.getItem("tarefas");
+    
+    if(salvo === "" || salvo === null) {
+        tudo.innerHTML = "<div class='listaTarefas oculto' id='lFazer'></div><div class='listaTarefas oculto' id='lFeita'></div>"
+    } else {
+        tudo.innerHTML = salvo
+    }
+}
+
 // Variável "ID" inicial dos itens da tarefa
-var id = 0
+let id = 0
 
 // Função "adicionar tarefa"
 function adicionar() {
@@ -50,6 +69,8 @@ function adicionar() {
     lixeira.setAttribute("id", "apagar" + id);
     lixeira.setAttribute("onclick", "excluir(this)");
     tarefa.appendChild(lixeira);
+
+    save()
 }
 
 // "ENTER" adiciona uma tarefa
@@ -91,6 +112,8 @@ function editar(textoAlterar) {
             textoTarefa.innerText = inputValue;
         }
     });
+
+    save()
 }
 
 // Botão "excluir" da tarefa
@@ -137,6 +160,8 @@ function excluir(button) {
     if(lfeito.innerHTML==="") {
         lfeito.classList.add("oculto");
     }    
+
+    save()
 }
 
 // Função "checkar tarefa"
@@ -169,4 +194,6 @@ function checkar(checkarTarefa) {
         lfazer.classList.remove("oculto");
         if (lfeita.children.length === 0) lfeita.classList.add("oculto");
     }
+
+    save()
 }
